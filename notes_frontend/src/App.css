@@ -1,19 +1,19 @@
-/* Light Theme Variables */
+/* Black and White Theme Variables */
 :root {
-  --primary: #1976d2;
-  --secondary: #424242;
-  --accent: #ffeb3b;
+  --primary: #000;
+  --secondary: #222;
+  --accent: #fff;
   --bg-appbar: #fff;
-  --bg-main: #f8fafc;
-  --sidebar-bg: #f1f4f8;
-  --sidebar-border: #e9ecef;
+  --bg-main: #fff;
+  --sidebar-bg: #f4f4f4;
+  --sidebar-border: #bbb;
   --sidebar-width: 240px;
   --main-content-bg: #fff;
-  --note-selected: #e3f2fd;
-  --text-primary: #222;
+  --note-selected: #e0e0e0;
+  --text-primary: #111;
   --text-secondary: #555;
   --border-radius: 8px;
-  --shadow: 0 2px 8px rgba(40,40,50,0.06);
+  --shadow: 0 2px 8px rgba(0,0,0,0.06);
   --font-sans: 'Segoe UI', Arial, sans-serif;
 }
 
@@ -66,7 +66,7 @@
   margin-right: auto;
   padding: 7px 16px;
   border: 1px solid var(--sidebar-border);
-  background: #fafbfc;
+  background: #fff;
   border-radius: 7px;
   font-size: 1rem;
   min-width: 220px;
@@ -76,11 +76,11 @@
   color: var(--text-primary);
 }
 .search-box:focus {
-  border-color: var(--primary);
+  border-color: #111;
 }
 .create-btn {
-  background: var(--accent);
-  color: #1a1a1a;
+  background: var(--primary);
+  color: var(--accent);
   font-weight: 600;
   font-size: 1rem;
   border: none;
@@ -88,12 +88,13 @@
   margin-left: 28px;
   padding: 8px 17px;
   cursor: pointer;
-  box-shadow: 0 1px 4px rgba(10,19,50,0.05);
-  transition: background 0.2s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.11);
+  transition: background 0.2s, color 0.2s;
 }
 .create-btn:hover,
 .create-btn:focus {
-  background: #ffe046;
+  background: #222;
+  color: #fff;
 }
 
 /* Sidebar Navigation */
@@ -114,7 +115,7 @@
   font-size: 1.1rem;
   font-weight: bold;
   padding: 20px 18px 8px 22px;
-  color: var(--secondary);
+  color: #222;
   letter-spacing: 0.2px;
 }
 .note-list {
@@ -134,10 +135,12 @@
   border-radius: 6px;
   transition: background 0.18s;
   border: none;
+  color: #111;
+  background: transparent;
 }
 .note-list-item.selected {
   background: var(--note-selected);
-  color: var(--primary);
+  color: #000;
 }
 .note-title {
   font-size: 1rem;
@@ -150,7 +153,7 @@
 .delete-btn {
   margin-left: 12px;
   background: transparent;
-  color: #aaa;
+  color: #999;
   border: none;
   font-size: 1.0rem;
   cursor: pointer;
@@ -163,8 +166,8 @@
   transition: color 0.13s, background 0.13s;
 }
 .delete-btn:hover {
-  color: #d32f2f;
-  background: #f8cfcf;
+  color: #fff;
+  background: #111;
 }
 .note-list-empty {
   padding: 10px 0 0 12px;
@@ -178,7 +181,7 @@
   outline: none;
   font-size: 1.35em;
   cursor: pointer;
-  color: var(--primary);
+  color: #000;
   margin-right: 3px;
   margin-left: 4px;
   padding: 2px 3px;
@@ -186,7 +189,7 @@
   transition: background 0.15s;
 }
 .sidebar-toggle-btn:hover {
-  background: #edeef3;
+  background: #eee;
 }
 .menu-icon {
   width: 24px;
@@ -198,7 +201,7 @@
 .menu-icon::before, .menu-icon::after, .menu-icon {
   content: "";
   display: block;
-  background: var(--primary);
+  background: #000;
   height: 3.2px;
   border-radius: 2px;
   width: 24px;
@@ -221,7 +224,7 @@
   background: #fff;
   border-radius: 10px;
   padding: 32px 30px 26px 30px;
-  box-shadow: 0 6px 28px rgba(34,72,135,0.065);
+  box-shadow: 0 6px 28px rgba(0,0,0,0.07);
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -236,32 +239,32 @@
   margin-bottom: 18px;
   outline: none;
   transition: border-color 0.18s;
-  color: var(--primary);
+  color: #000;
   padding: 7px 6px 5px 0;
 }
 .note-title-input:focus {
-  border-color: var(--primary);
+  border-color: #000;
 }
 .note-content-input {
   width: 100%;
   min-height: 160px;
   border: 1.5px solid var(--sidebar-border);
-  background: #fbfcff;
+  background: #fff;
   outline: none;
   padding: 10px 13px;
   margin-bottom: 15px;
   resize: vertical;
   font-size: 1.05rem;
   border-radius: 6px;
-  color: var(--text-primary);
+  color: #111;
   transition: border-color 0.16s;
 }
 .note-content-input:focus {
-  border-color: var(--primary);
+  border-color: #111;
 }
 .editor-meta {
   font-size: 13px;
-  color: var(--text-secondary);
+  color: #555;
   padding-top: 8px;
   display: flex;
   gap: 14px;
@@ -276,7 +279,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #bbb;
+  color: #999;
   font-size: 1.35rem;
 }
 .empty-icon {
